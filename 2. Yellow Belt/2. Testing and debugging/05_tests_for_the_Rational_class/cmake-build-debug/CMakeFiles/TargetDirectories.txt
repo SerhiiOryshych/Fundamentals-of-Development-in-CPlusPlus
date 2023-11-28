@@ -1,3 +1,0 @@
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/05_tests_for_the_Rational_class/cmake-build-debug/CMakeFiles/tests_for_the_Rational_class.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/05_tests_for_the_Rational_class/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/05_tests_for_the_Rational_class/cmake-build-debug/CMakeFiles/rebuild_cache.dir

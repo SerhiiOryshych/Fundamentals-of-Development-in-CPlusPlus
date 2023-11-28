@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2" -B "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2/cmake-build-debug"
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2/cmake-build-debug

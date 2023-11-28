@@ -1,3 +1,0 @@
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/10_personal_budget_starter_plus_edition/cmake-build-debug/CMakeFiles/10_personal_budget_starter_plus_edition.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/10_personal_budget_starter_plus_edition/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/10_personal_budget_starter_plus_edition/cmake-build-debug/CMakeFiles/rebuild_cache.dir

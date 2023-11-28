@@ -32,4 +32,12 @@
 *.app
 
 # .DS_Stor
-.DS_Stor
+.DS_Store
+
+# CLion
+.idea/
+
+# Build directories
+cmake-build-debug/
+build/
+out/

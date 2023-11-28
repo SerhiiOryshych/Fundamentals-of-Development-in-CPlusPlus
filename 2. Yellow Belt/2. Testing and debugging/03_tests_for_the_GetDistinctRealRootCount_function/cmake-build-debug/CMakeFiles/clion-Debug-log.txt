@@ -1,4 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/03_tests_for_the_GetDistinctRealRootCount_function" -B "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/03_tests_for_the_GetDistinctRealRootCount_function/cmake-build-debug"
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/03_tests_for_the_GetDistinctRealRootCount_function/cmake-build-debug

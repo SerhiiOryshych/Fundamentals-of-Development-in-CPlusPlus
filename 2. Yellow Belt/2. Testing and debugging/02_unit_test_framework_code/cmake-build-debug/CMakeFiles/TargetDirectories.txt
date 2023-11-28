@@ -1,3 +1,0 @@
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/02_unit_test_framework_code/cmake-build-debug/CMakeFiles/02_unit_test_framework_code.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/02_unit_test_framework_code/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/02_unit_test_framework_code/cmake-build-debug/CMakeFiles/rebuild_cache.dir

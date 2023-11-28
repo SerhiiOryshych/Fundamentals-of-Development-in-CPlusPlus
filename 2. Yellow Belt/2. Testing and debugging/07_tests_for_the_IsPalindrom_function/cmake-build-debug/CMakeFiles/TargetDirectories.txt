@@ -1,3 +1,0 @@
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/07_tests_for_the_IsPalindrom_function/cmake-build-debug/CMakeFiles/07_tests_for_the_IsPalindrom_function.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/07_tests_for_the_IsPalindrom_function/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/07_tests_for_the_IsPalindrom_function/cmake-build-debug/CMakeFiles/rebuild_cache.dir

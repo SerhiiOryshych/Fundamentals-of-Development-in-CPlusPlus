@@ -1,6 +1,0 @@
-# ninja log v5
-1	370	1699974430665999165	CMakeFiles/04_decomposition_of_a_program_2.dir/query.cpp.o	bb26cbf4388cb06f
-0	376	1699974430673391251	CMakeFiles/04_decomposition_of_a_program_2.dir/main.cpp.o	c78b670c7090c8cd
-1	384	1699974430680268127	CMakeFiles/04_decomposition_of_a_program_2.dir/responses.cpp.o	4e28eea24c6ce3bf
-0	442	1699974430739710781	CMakeFiles/04_decomposition_of_a_program_2.dir/bus_manager.cpp.o	571cf2c0b9f95f6a
-442	492	1699974430791297597	04_decomposition_of_a_program_2	d3b6cffc06860400

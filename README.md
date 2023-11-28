@@ -1,2 +1,9 @@
-# Fundamentals-of-Development-in-CPlusPlus
-Fundamentals of Development in C++
+# Fundamentals of Development in C++
+
+| #   | Belt                                                                                                              |                                                                 Certificate                                                                 |
+|-----|-------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------:|
+| 1   | [White](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/tree/main/1.%20White%20Belt)   |                                     [Link](https://coursera.org/share/89edcf678ab5a97abadebb89c788b7e6)                                     |
+| 2   | [Yellow](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/tree/main/2.%20Yellow%20Belt) | [Link](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/blob/main/2.%20Yellow%20Belt/certificate_yellow_belt.pdf) |
+| 3   | [Red](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/tree/main/3.%20Red%20Belt)       |    [Link](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/blob/main/3.%20Red%20Belt/certificate_red_belt.pdf)    |
+| 4   | [Brown](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/tree/main/4.%20Brown%20Belt)   |  [Link](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/blob/main/4.%20Brown%20Belt/certificate_brown_belt.pdf)  |
+| 5   | [Black](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/tree/main/5.%20Black%20Belt)   |  [Link](https://github.com/SerhiiOryshych/Fundamentals-of-Development-in-CPlusPlus/blob/main/5.%20Black%20Belt/certificate_black_belt.pdf)  |

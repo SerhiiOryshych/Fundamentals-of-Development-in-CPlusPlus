@@ -1,0 +1,23 @@
+# ninja log v5
+0	440	1699977346721103922	CMakeFiles/01_course_project.dir/node.cpp.o	9ab24e2869e95b72
+0	458	1699977346739215152	CMakeFiles/01_course_project.dir/date.cpp.o	e43b0777557be253
+0	510	1699977346795136822	CMakeFiles/01_course_project.dir/condition_parser.cpp.o	d6ada85a72cbad2
+1	529	1699977346813979067	CMakeFiles/01_course_project.dir/token.cpp.o	3f56af15a9cf3e12
+0	578	1699977476382290550	CMakeFiles/Database2.dir/condition_parser.cpp.o	65b0e1f89c2f9e3c
+0	600	1699977346885360472	CMakeFiles/01_course_project.dir/database.cpp.o	a4104664e53abadb
+0	474	1699977346757635251	CMakeFiles/01_course_project.dir/condition_parser_test.cpp.o	cd9391a96ffa1466
+1	490	1699977476294148310	CMakeFiles/Database2.dir/node.cpp.o	d50ce1d40aa514bb
+1	481	1699977476285294652	CMakeFiles/Database2.dir/date.cpp.o	3847733ce42c86bc
+0	631	1699977476435332871	CMakeFiles/Database2.dir/main.cpp.o	806196e159618a37
+0	561	1699977476357480474	CMakeFiles/Database2.dir/condition_parser_test.cpp.o	b4db1c34822f62cf
+1	717	1699977476521956467	CMakeFiles/Database2.dir/database.cpp.o	6d18fe19555d9862
+1	539	1699977476341541682	CMakeFiles/Database2.dir/token.cpp.o	2e7f454357612e62
+717	772	1699977476579510139	Database2	d0610aa472070f4b
+1	405	1699977506056261682	CMakeFiles/01_course_project.dir/date.cpp.o	e43b0777557be253
+1	407	1699977506060414820	CMakeFiles/01_course_project.dir/token.cpp.o	3f56af15a9cf3e12
+1	414	1699977506068324006	CMakeFiles/01_course_project.dir/node.cpp.o	9ab24e2869e95b72
+0	415	1699977506069452771	CMakeFiles/01_course_project.dir/condition_parser_test.cpp.o	cd9391a96ffa1466
+1	485	1699977506139378478	CMakeFiles/01_course_project.dir/condition_parser.cpp.o	d6ada85a72cbad2
+0	578	1699977506231870771	CMakeFiles/01_course_project.dir/main.cpp.o	4950fd0cf469d7e3
+1	622	1699977506276176684	CMakeFiles/01_course_project.dir/database.cpp.o	a4104664e53abadb
+622	672	1699977506328831498	01_course_project	b58dd5d296e00c9

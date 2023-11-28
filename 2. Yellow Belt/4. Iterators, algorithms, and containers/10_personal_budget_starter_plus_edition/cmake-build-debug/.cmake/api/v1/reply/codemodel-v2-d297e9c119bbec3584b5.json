@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "10_personal_budget_starter_plus_edition",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "10_personal_budget_starter_plus_edition::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-10_personal_budget_starter_plus_edition-Debug-6a19ea34bbb4f500020d.json",
+					"name" : "10_personal_budget_starter_plus_edition",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/10_personal_budget_starter_plus_edition/cmake-build-debug",
+		"source" : "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/10_personal_budget_starter_plus_edition"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(03_tests_for_the_GetDistinctRealRootCount_function)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(03_tests_for_the_GetDistinctRealRootCount_function main.cpp)

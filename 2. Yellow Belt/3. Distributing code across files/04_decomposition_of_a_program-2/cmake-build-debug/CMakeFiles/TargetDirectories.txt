@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2/cmake-build-debug/CMakeFiles/04_decomposition_of_a_program_2.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/3. Distributing code across files/04_decomposition_of_a_program-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

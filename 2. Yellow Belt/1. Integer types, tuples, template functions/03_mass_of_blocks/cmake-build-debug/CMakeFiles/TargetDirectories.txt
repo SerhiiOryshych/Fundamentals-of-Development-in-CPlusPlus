@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/03_mass_of_blocks/cmake-build-debug/CMakeFiles/03_mass_of_blocks.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/03_mass_of_blocks/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/03_mass_of_blocks/cmake-build-debug/CMakeFiles/rebuild_cache.dir

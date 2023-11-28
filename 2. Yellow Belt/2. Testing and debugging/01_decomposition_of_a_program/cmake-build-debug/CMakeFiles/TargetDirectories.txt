@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/01_decomposition_of_a_program/cmake-build-debug/CMakeFiles/01_decomposition_of_a_program.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/01_decomposition_of_a_program/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/2. Testing and debugging/01_decomposition_of_a_program/cmake-build-debug/CMakeFiles/rebuild_cache.dir

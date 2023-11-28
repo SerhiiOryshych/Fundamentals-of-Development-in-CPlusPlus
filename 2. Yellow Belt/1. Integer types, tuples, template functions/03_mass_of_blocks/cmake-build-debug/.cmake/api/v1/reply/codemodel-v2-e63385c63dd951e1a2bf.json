@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "03_mass_of_blocks",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "03_mass_of_blocks::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-03_mass_of_blocks-Debug-59e8aca8e2fe243fb554.json",
+					"name" : "03_mass_of_blocks",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/03_mass_of_blocks/cmake-build-debug",
+		"source" : "/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/03_mass_of_blocks"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

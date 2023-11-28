@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/01_matrix_sum/cmake-build-debug/CMakeFiles/matrix_sum.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/01_matrix_sum/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/1. Integer types, tuples, template functions/01_matrix_sum/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/03_split_into_words/cmake-build-debug/CMakeFiles/03_split_into_words.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/03_split_into_words/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/4. Iterators, algorithms, and containers/03_split_into_words/cmake-build-debug/CMakeFiles/rebuild_cache.dir

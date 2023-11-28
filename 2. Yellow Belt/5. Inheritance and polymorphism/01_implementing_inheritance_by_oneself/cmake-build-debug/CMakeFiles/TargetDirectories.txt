@@ -1,0 +1,3 @@
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/5. Inheritance and polymorphism/01_implementing_inheritance_by_oneself/cmake-build-debug/CMakeFiles/01_implementing_inheritance_by_oneself.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/5. Inheritance and polymorphism/01_implementing_inheritance_by_oneself/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/serhiioryshych/CLionProjects/stepik/Fundamentals of Development in C++/2. Yellow Belt/5. Inheritance and polymorphism/01_implementing_inheritance_by_oneself/cmake-build-debug/CMakeFiles/rebuild_cache.dir

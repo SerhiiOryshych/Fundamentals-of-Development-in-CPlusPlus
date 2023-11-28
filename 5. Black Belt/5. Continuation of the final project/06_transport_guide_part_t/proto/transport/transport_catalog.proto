@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+import "transport_render.proto";
+import "transport_router.proto";
+import "database.proto";
+import "db_item_id_name_map.proto";
+
+package TCProto;
+
+message TransportCatalog {
+  repeated Stop stops = 1;
+  repeated Bus buses = 2;
+  RouterProto.Router router = 3;
+  RenderProto.RenderSettings render = 4;
+  YellowPages.Database yellow_pages = 5;
+  DbItemIdNameMapProto.IdToNameMap id_to_name_map = 6;
+}
+
+message AdjacentStops {
+  int32 dist = 2;
+  
+  int32 stop_id = 3;
+}
+
+message Stop {
+  double longitude = 3;
+  double latitude = 4;
+  repeated AdjacentStops adjacent_stops = 5;
+
+  int32 stop_id = 6;
+  repeated int32 buses_id = 7;
+}
+
+message Bus {
+  int32 length = 2;
+  double curvature = 3;
+  uint32 stop_count = 4;
+  uint32 unique_stop_count = 5;
+  bool is_roundtrip = 6;
+
+  int32 bus_id = 9;
+  repeated int32 stops_id = 8;
+}

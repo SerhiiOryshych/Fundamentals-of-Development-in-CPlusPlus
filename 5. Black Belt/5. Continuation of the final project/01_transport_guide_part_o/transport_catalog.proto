@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package TransportCatalog;
+
+message StopStatsResponse {
+  string name = 1;
+  repeated string buses = 2;
+}
+
+message BusStatsResponse {
+  string name = 1;
+  int32 stop_count = 2;
+  int32 unique_stop_count = 3;
+  float route_length = 4;
+  float curvature = 5;
+}
+
+
+message TransportCatalog {
+  repeated StopStatsResponse stop_responses = 1;
+  repeated BusStatsResponse bus_responses = 2;
+}

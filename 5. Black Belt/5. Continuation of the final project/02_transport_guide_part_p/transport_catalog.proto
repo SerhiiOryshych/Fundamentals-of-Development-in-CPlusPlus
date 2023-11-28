@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package TransportCatalog;
+
+message RoadDistance {
+  string stop_name = 1;
+  int32 distance = 2;
+}
+
+message StopStatsResponse {
+  string name = 1;
+  repeated string buses = 2;
+  float lat = 3;
+  float lng = 4;
+  repeated RoadDistance road_distances = 5;
+}
+
+message BusStatsResponse {
+  string name = 1;
+  int32 stop_count = 2;
+  int32 unique_stop_count = 3;
+  float route_length = 4;
+  float curvature = 5;
+  bool is_roundtrip = 6;
+  repeated string route_stops = 7;
+}
+
+message RoutingSettings {
+  float bus_wait_time = 1;
+  float bus_velocity = 2;
+}
+
+
+message TransportCatalog {
+  repeated StopStatsResponse stop_responses = 1;
+  repeated BusStatsResponse bus_responses = 2;
+  RoutingSettings routing_settings = 3;
+}

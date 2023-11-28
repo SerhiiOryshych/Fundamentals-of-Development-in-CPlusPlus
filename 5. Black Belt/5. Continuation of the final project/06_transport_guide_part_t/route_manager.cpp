@@ -1,0 +1,214 @@
+#include "route_manager.h"
+#include "data_manager.h"
+
+#include "transport_catalog.pb.h"
+
+auto Data_Structure::DataBaseRouter::proxy_route::GetRoute() const {
+    if (rf)
+        return main_router->GetRouteRangeOfEdges(rf->id);
+    throw std::logic_error("bad route info value!");
+}
+
+Data_Structure::DataBaseRouter::proxy_route::~proxy_route() {
+    if (rf)
+        main_router->ReleaseRoute(rf->id);
+}
+
+std::optional<Graph::Router<double>::RouteInfo> const &Data_Structure::DataBaseRouter::proxy_route::GetInfo() const {
+    return rf;
+}
+
+bool Data_Structure::DataBaseRouter::proxy_route::IsValid() const {
+    if (rf)
+        return main_router->CheckCache(rf->id);
+    return false;
+}
+
+Data_Structure::DataBaseRouter::DataBaseRouter(RouterProto::Router const &router_mes,
+                                               DbItemIdNameMap &db_item_id_name_map) : routing_settings(
+        {router_mes.routing_settings().bus_wait_time(), router_mes.routing_settings().bus_velocity(),
+         router_mes.routing_settings().pedestrian_velocity()}), graph_map(router_mes) {
+    for (auto &vert: router_mes.vertexes()) {
+        waiting_stops.emplace(vert.vertex_id(),
+                              vertices_path{
+                                      vert.route_data_in(0).vertex_id(),
+                                      vert.route_data_out(0).vertex_id()});
+    }
+
+    for (auto &edge: router_mes.edges()) {
+        RouteResponse::ItemPtr item;
+        if (edge.has_count()) {
+            item = std::make_shared<RouteResponse::Bus>(edge.count().count());
+        } else {
+            item = std::make_shared<RouteResponse::Wait>();
+        }
+
+        item->name = db_item_id_name_map.GetNameById(edge.edge_id());
+        item->time = edge.weight();
+        edge_by_bus.emplace(edge.id(), std::move(item));
+    }
+
+    router = std::make_shared<Graph::Router<double>>(graph_map, router_mes);
+}
+
+
+Data_Structure::DataBaseRouter::DataBaseRouter(const std::unordered_map<int, Stop> &stops,
+                                               const std::unordered_map<int, Bus> &buses,
+                                               RoutingSettings routing_settings_,
+                                               DbItemIdNameMap &db_item_id_name_map) : graph_map(stops.size() * 2),
+                                                                                       routing_settings(
+                                                                                               routing_settings_) {
+    FillGraphWithStops(stops, db_item_id_name_map);
+    FillGraphWithBuses(buses, stops, db_item_id_name_map);
+
+    router = std::make_shared<Graph::Router<double>>(graph_map);
+}
+
+void Data_Structure::DataBaseRouter::FillGraphWithStops(const std::unordered_map<int, Stop> &stops,
+                                                        DbItemIdNameMap &db_item_id_name_map) {
+    Graph::VertexID vertex_id = 0;
+    for (auto &[id, _]: stops) {
+        vertices_path &vert_ids = waiting_stops[id];
+        vert_ids.inp = vertex_id++;
+        vert_ids.out = vertex_id++;
+
+        auto edge_id = graph_map.AddEdge({
+                                                 vert_ids.inp,
+                                                 vert_ids.out,
+                                                 routing_settings.bus_wait_time
+                                         });
+        auto cur_item = std::make_shared<RouteResponse::Wait>();
+        cur_item->time = routing_settings.bus_wait_time;
+        cur_item->name = db_item_id_name_map.GetNameById(id);
+        edge_by_bus.emplace(std::piecewise_construct, std::forward_as_tuple(edge_id),
+                            std::forward_as_tuple(std::move(cur_item)));
+    }
+}
+
+void Data_Structure::DataBaseRouter::FillGraphWithBuses(const std::unordered_map<int, Bus> &buses,
+                                                        const std::unordered_map<int, Stop> &stops,
+                                                        DbItemIdNameMap &db_item_id_name_map) {
+    for (auto &[_, bus]: buses) {
+        size_t stop_count = bus.stops.size();
+        if (stop_count <= 1)
+            continue;
+
+        auto range = !bus.is_roundtrip
+                     ? Ranges::ToMiddle(Ranges::AsRange(bus.stops))
+                     : Ranges::AsRange(bus.stops);
+        for (auto bus_stop = range.begin(); bus_stop != range.end(); bus_stop++) {
+            int total_distance = 0;
+            auto &cur_stop = *bus_stop;
+            size_t i = 0;
+            for (auto stop_it = bus_stop; stop_it != std::prev(range.end()); stop_it++) {
+                auto time = Data_Structure::ComputeStopsDistance(stops.at(*stop_it),
+                                                                 stops.at(*std::next(stop_it)),
+                                                                 db_item_id_name_map);
+                total_distance += time;
+                auto edge_id = graph_map.AddEdge(
+                        {waiting_stops.at(cur_stop).out,
+                         waiting_stops.at(*std::next(stop_it)).inp,
+                         (static_cast<double>(total_distance) / (routing_settings.bus_velocity / 3.6)) / 60});
+                auto cur_item = std::make_shared<RouteResponse::Bus>(++i);
+                cur_item->time = (static_cast<double>(total_distance) / (routing_settings.bus_velocity / 3.6)) / 60;
+                cur_item->name = db_item_id_name_map.GetNameById(bus.bus_id);
+                edge_by_bus.emplace(std::piecewise_construct, std::forward_as_tuple(edge_id),
+                                    std::forward_as_tuple(std::move(cur_item)));
+            }
+            total_distance = 0;
+            i = 0;
+            if (!bus.is_roundtrip) {
+                for (auto stop_it = bus_stop; stop_it != range.begin(); stop_it--) {
+                    auto time = Data_Structure::ComputeStopsDistance(
+                            stops.at(*stop_it),
+                            stops.at(*std::prev(stop_it)),
+                            db_item_id_name_map);
+                    total_distance += time;
+                    auto edge_id = graph_map.AddEdge(
+                            {waiting_stops.at(cur_stop).out,
+                             waiting_stops.at(*std::prev(stop_it)).inp,
+                             (static_cast<double>(total_distance) / (routing_settings.bus_velocity / 3.6)) / 60});
+                    auto cur_item = std::make_shared<RouteResponse::Bus>(++i);
+                    cur_item->time = (static_cast<double>(total_distance) / (routing_settings.bus_velocity / 3.6)) / 60;
+                    cur_item->name = db_item_id_name_map.GetNameById(bus.bus_id);
+                    edge_by_bus.emplace(std::piecewise_construct, std::forward_as_tuple(edge_id),
+                                        std::forward_as_tuple(std::move(cur_item)));
+                }
+            }
+        }
+    }
+}
+
+Data_Structure::RouteRespType
+Data_Structure::DataBaseRouter::CreateRoute(std::string const &from,
+                                            std::string const &to,
+                                            DbItemIdNameMap &db_item_id_name_map) {
+    proxy_route proxy{router, router->BuildRoute(waiting_stops.at(db_item_id_name_map.GetIdByName(from)).inp,
+                                                 waiting_stops.at(db_item_id_name_map.GetIdByName(to)).inp)};
+    if (!proxy.IsValid())
+        return nullptr;
+
+    RouteRespType resp = std::make_shared<RouteResponse>();
+    resp->items.reserve(proxy.GetInfo()->edge_count);
+    for (auto edge_id: proxy.GetRoute()) {
+        resp->items.push_back(edge_by_bus.at(edge_id));
+    }
+    resp->total_time = proxy.GetInfo()->weight;
+    return resp;
+}
+
+std::optional<double> Data_Structure::DataBaseRouter::GetRouteWeight(std::string const &from,
+                                                                     std::string const &to,
+                                                                     DbItemIdNameMap &db_item_id_name_map) {
+    return router->GetRouteWeight(waiting_stops.at(db_item_id_name_map.GetIdByName(from)).inp,
+                                  waiting_stops.at(db_item_id_name_map.GetIdByName(to)).inp);
+}
+
+void Data_Structure::DataBaseRouter::Serialize(TCProto::TransportCatalog &tc,
+                                               DbItemIdNameMap &db_item_id_name_map) const {
+    RouterProto::Router router_mes;
+
+    RouterProto::RoutingSettings rs_mes;
+    rs_mes.set_bus_wait_time(routing_settings.bus_wait_time);
+    rs_mes.set_bus_velocity(routing_settings.bus_velocity);
+    rs_mes.set_pedestrian_velocity(routing_settings.pedestrian_velocity);
+    *router_mes.mutable_routing_settings() = std::move(rs_mes);
+
+    for (auto &[stop_id, verts]: waiting_stops) {
+        RouterProto::Vertex vert;
+        vert.set_vertex_id(stop_id);
+
+        RouterProto::VertInfo vi1;
+        vi1.set_vertex_id(verts.inp);
+        vi1.set_weight(0);
+        *vert.add_route_data_in() = vi1;
+
+        RouterProto::VertInfo vi2;
+        vi2.set_vertex_id(verts.out);
+        vi2.set_weight(0);
+        *vert.add_route_data_out() = vi2;
+
+        *router_mes.add_vertexes() = std::move(vert);
+    }
+
+    graph_map.Serialize(router_mes);
+
+    for (auto &edge: *router_mes.mutable_edges()) {
+        auto &item = edge_by_bus.at(edge.id());
+
+        edge.set_edge_id(db_item_id_name_map.GetIdByName(item->name));
+        if (item->type == RouteResponse::Item::ItemType::BUS) {
+            RouterProto::SpanCount sc;
+            sc.set_count(reinterpret_cast<RouteResponse::Bus const *>(item.get())->span_count);
+            *edge.mutable_count() = std::move(sc);
+        }
+    }
+
+    router->Serialize(router_mes);
+
+    *tc.mutable_router() = std::move(router_mes);
+}
+
+Data_Structure::RoutingSettings Data_Structure::DataBaseRouter::GetSettings() const {
+    return routing_settings;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package DbItemIdNameMapProto;
+
+message IdToNameMap {
+  map<int32, string> value = 1;
+}

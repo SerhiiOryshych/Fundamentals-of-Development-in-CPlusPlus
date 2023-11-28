@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import "map_renderer.proto";
+import "transport_router.proto";
+import "database.proto";
+
+package TCProto;
+
+message StopResponse {
+  string name = 1;
+  repeated string bus_names = 2;
+}
+
+message BusResponse {
+  string name = 1;
+  uint32 stop_count = 2;
+  uint32 unique_stop_count = 3;
+  uint32 road_route_length = 4;
+  double geo_route_length = 5;
+}
+
+message TransportCatalog {
+  repeated StopResponse stops = 1;
+  repeated BusResponse buses = 2;
+  TransportRouter router = 3;
+  MapRenderer renderer = 4;
+  YellowPages.Database yellow_pages = 5;
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "request_id": 826874078,
+    "curvature": 1.604811,
+    "route_length": 11230.000000,
+    "stop_count": 8,
+    "unique_stop_count": 7
+  },
+  {
+    "request_id": 1086967114,
+    "total_time": 15.960000,
+    "items": [
+      {
+        "type": "Wait",
+        "stop_name": "Морской вокзал",
+        "time": 2.000000
+      },
+      {
+        "type": "Bus",
+        "bus": "114",
+        "time": 1.700000,
+        "span_count": 1
+      },
+      {
+        "type": "Wait",
+        "stop_name": "Ривьерский мост",
+        "time": 2.000000
+      },
+      {
+        "type": "Bus",
+        "bus": "14",
+        "time": 6.060000,
+        "span_count": 4
+      },
+      {
+        "type": "Wait",
+        "stop_name": "Улица Докучаева",
+        "time": 2.000000
+      },
+      {
+        "type": "Bus",
+        "bus": "24",
+        "time": 2.200000,
+        "span_count": 1
+      }
+    ]
+  },
+  {
+    "request_id": 1218663236,
+    "map": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"><polyline points=\"270.000000,783.333333 50.000000,600.000000 270.000000,783.333333 \" fill=\"none\" stroke=\"green\" stroke-width=\"14.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><polyline points=\"1150.000000,416.666667 270.000000,233.333333 50.000000,600.000000 270.000000,1150.000000 490.000000,966.666667 710.000000,783.333333 930.000000,600.000000 1150.000000,416.666667 \" fill=\"none\" stroke=\"rgb(255,160,0)\" stroke-width=\"14.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><polyline points=\"930.000000,600.000000 490.000000,416.666667 270.000000,233.333333 50.000000,50.000000 270.000000,233.333333 490.000000,416.666667 930.000000,600.000000 \" fill=\"none\" stroke=\"red\" stroke-width=\"14.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><circle cx=\"270.000000\" cy=\"1150.000000\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"490.000000\" cy=\"966.666667\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"270.000000\" cy=\"783.333333\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"490.000000\" cy=\"416.666667\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"710.000000\" cy=\"783.333333\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"50.000000\" cy=\"600.000000\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"50.000000\" cy=\"50.000000\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"930.000000\" cy=\"600.000000\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"1150.000000\" cy=\"416.666667\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><circle cx=\"270.000000\" cy=\"233.333333\" r=\"5.000000\" fill=\"white\" stroke=\"none\" stroke-width=\"1.000000\" /><text x=\"270.000000\" y=\"783.333333\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgba(255,255,255,0.850000)\" stroke=\"rgba(255,255,255,0.850000)\" stroke-width=\"3.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" >114</text><text x=\"270.000000\" y=\"783.333333\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"green\" stroke=\"none\" stroke-width=\"1.000000\" >114</text><text x=\"50.000000\" y=\"600.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgba(255,255,255,0.850000)\" stroke=\"rgba(255,255,255,0.850000)\" stroke-width=\"3.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" >114</text><text x=\"50.000000\" y=\"600.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"green\" stroke=\"none\" stroke-width=\"1.000000\" >114</text><text x=\"1150.000000\" y=\"416.666667\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgba(255,255,255,0.850000)\" stroke=\"rgba(255,255,255,0.850000)\" stroke-width=\"3.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" >14</text><text x=\"1150.000000\" y=\"416.666667\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgb(255,160,0)\" stroke=\"none\" stroke-width=\"1.000000\" >14</text><text x=\"930.000000\" y=\"600.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgba(255,255,255,0.850000)\" stroke=\"rgba(255,255,255,0.850000)\" stroke-width=\"3.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" >24</text><text x=\"930.000000\" y=\"600.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"red\" stroke=\"none\" stroke-width=\"1.000000\" >24</text><text x=\"50.000000\" y=\"50.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"rgba(255,255,255,0.850000)\" stroke=\"rgba(255,255,255,0.850000)\" stroke-width=\"3.000000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" >24</text><text x=\"50.000000\" y=\"50.000000\" dx=\"7.000000\" dy=\"15.000000\" font-size=\"20\" font-family=\"Verdana\" font-weight=\"bold\" fill=\"red\" stroke=\"none\" stroke-width=\"1.000000\" >24</text></svg>"
+  }
+]
